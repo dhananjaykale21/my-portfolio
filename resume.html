@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Dhananjay Kale</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #e8e8e8;
+            background-color: #000000;
+            overflow: hidden; /* Prevent scrollbars due to sparkles */
+        }
+
+        /* Sparkling effect */
+        .sparkle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: sparkle 1.5s infinite alternate;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s;
+        }
+        .resume-section {
+            margin-bottom: 15px;
+            background: #231414;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .resume-header {
+            background: #6789ae;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+        .resume-content {
+            padding: 15px;
+            display: none; /* Hidden by default */
+            animation: slideDown 0.5s;
+        }
+        .resume-header:hover {
+            background: #0056b3;
+        }
+        .download-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 20px auto;
+            text-align: center;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .download-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="journey.html">Journey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Dhananjay Kale</h1>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('summary')">
+            Professional Summary
+        </div>
+        <div class="resume-content" id="summary">
+            <p>Experienced DevOps Engineer with expertise in Azure, Google Cloud Platform (GCP), Kubernetes, and infrastructure automation. 
+            Adept at managing and scaling cloud infrastructure, implementing CI/CD pipelines, and working across hybrid cloud environments 
+            to streamline development processes and ensure high availability and security. Passionate about driving efficiency, automation, 
+            and continuous improvement within cloud operations.</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('experience')">
+            Experience
+        </div>
+        <div class="resume-content" id="experience">
+            <h3>DevOps Engineer</h3>
+            <p>Henkel, Remote - Full-time (Jan 2024 - Present)</p>
+            <ul>
+                <li>Designed, implemented, and optimized CI/CD pipelines using Jenkins, GitLab, and Azure DevOps, enabling faster delivery cycles.</li>
+                <li>Managed cloud infrastructure on Azure and GCP, improving operational efficiency and reducing downtime.</li>
+                <li>Automated the deployment of Kubernetes clusters and containerized applications using Docker and Helm charts.</li>
+                <li>Monitored and optimized cloud resource utilization, reducing costs by 20% through better scaling strategies and optimization techniques.</li>
+            </ul>
+            <h3>Cloud Operations Engineer</h3>
+            <p>Infosys, Pune - Full-time (Dec 2020 - Dec 2023)</p>
+            <ul>
+                <li>Managed Azure and GCP environments, ensuring continuous operations and proactive issue resolution for cloud-based infrastructure.</li>
+                <li>Implemented infrastructure as code (IaC) with Terraform and ARM templates for provisioning and managing cloud resources.</li>
+                <li>Collaborated with development teams to integrate monitoring and alerting systems using Prometheus and Grafana for performance tracking.</li>
+                <li>Assisted in migrating legacy applications to cloud environments, improving scalability and performance while reducing operational costs.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('skills')">
+            Skills
+        </div>
+        <div class="resume-content" id="skills">
+            <ul>
+                <p>Cloud Platforms: Azure, Google Cloud Platform (GCP)</p>
+                <p>Containerization & Orchestration: Docker, Kubernetes, Helm</p>
+                <p>Infrastructure as Code (IaC): Terraform, Azure Resource Manager (ARM)</p>
+                <p>CI/CD Tools: Jenkins, GitLab CI, Azure DevOps</p>
+                <p>Monitoring & Logging: Prometheus, Grafana, ELK Stack</p>
+                <p>Scripting: Bash, PowerShell, Python</p>
+                <p>Version Control: Git, GitHub, GitLab</p>
+                <p>Operating Systems: Linux, Windows Server</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('education')">
+            Education
+        </div>
+        <div class="resume-content" id="education">
+            <h3>Bachelor of Technology (BTech)</h3>
+            <p>Babasaheb Ambedkar Marathwada University (07/2021 - 05/2024)</p>
+            <p>CGPA: 9.00</p>
+            <h3>Diploma in Electronics and Telecommunication</h3>
+            <p>Vishweshwarayya Abhiyantriki Padvika Mahavidyalaya (06/2017 - 06/2020)</p>
+            <p>Percentage: 89.40%</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('certifications')">
+            Certifications
+        </div>
+        <div class="resume-content" id="certifications">
+            <ul>
+                <li>Microsoft Certified: Azure Fundamentals</li>
+                <li>Google Associate Cloud Engineer</li>
+                <li>Google Certified Digital transformation with cloud</li>
+                <li>Google Certified Professional Cloud Architect</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('interests')">
+            Interests
+        </div>
+        <div class="resume-content" id="interests">
+            <ul>
+                <p>Cloud Automation and DevOps Best Practices</p>
+                <p>Exploring Kubernetes and container orchestration technologies</p>
+                <p>Continuous Learning in Cloud Computing and DevOps Tools</p>
+            </ul>
+        </div>
+    </div>
+
+    <a class="download-button" href="Dhananjay kale.pdf" download>Download Resume</a>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+        // Create sparkles
+        function createSparkles() {
+            for (let i = 0; i < 50; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.width = Math.random() * 5 + 'px';
+                sparkle.style.height = sparkle.style.width; // Make it circular
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                sparkle.style.animationDuration = Math.random() * 1 + 0.5 + 's';
+                sparkle.style.opacity = Math.random();
+                document.body.appendChild(sparkle);
+
+                // Remove sparkle after animation
+                sparkle.addEventListener('animationend', () => {
+                    sparkle.remove();
+                });
+            }
+        }
+
+        // Create sparkles every second
+        setInterval(createSparkles, 1000);
+    </script>
+
+    <footer style="font-size: 0.8em; padding: 5px 0; text-align: center; background-color: #000000; color: #ffffff;">
+        <p>&copy; 2024 Dhananjay Kale | All Rights Reserved</p>
+    </footer>
+    <script src="js/animations.js"></script>
+</body>
+</html>
